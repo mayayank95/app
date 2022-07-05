@@ -12,7 +12,8 @@ def do_semantic(img_path):
     absolute_path = os.path.abspath("cce_dice_loss_pretrained_model.h5")
     # img = cv2.imread(img_path)
     img = mpimg.imread(img_path)
-    img = cv2.resize(img, (256, 256), interpolation=cv2.INTER_NEAREST)  # [:,:,0]
+    img = resize(img, (256, 256)) 
+#   img = cv2.resize(img, (256, 256), interpolation=cv2.INTER_NEAREST)  # [:,:,0]
 
     # segment_image = semantic_segmentation()
 #     model = tf.keras.models.load_model(absolute_path)
