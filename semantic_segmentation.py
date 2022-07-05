@@ -13,7 +13,7 @@ def do_semantic(img_path):
     img = cv2.imread(img_path)
     #img = mpimg.imread(img_path)
     #img = resize(img, (256, 256)) 
-   img = cv2.resize(img, (256, 256), interpolation=cv2.INTER_NEAREST)  # [:,:,0]
+    img = cv2.resize(img, (256, 256), interpolation=cv2.INTER_NEAREST)  # [:,:,0]
 
     # segment_image = semantic_segmentation()
     model = tf.keras.models.load_model(absolute_path)
